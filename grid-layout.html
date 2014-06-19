@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Grid layout</title>
+
+    <style>
+
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            color: white;
+            display: grid;
+            grid-template-columns: 300px 15px 1fr;
+            grid-template-rows: auto 15px auto 15px auto;
+        }
+
+        .header {
+            background: #999;
+            grid-column: 1 / span 3;
+            grid-row: 1;
+        }
+
+        .footer {
+            background: #333;
+            grid-row: 5;
+            grid-column: 1 / span 5;
+        }
+
+        .main {
+            color: black;
+            background: #eee;
+            grid-column: 3;
+            grid-row: 3;
+        }
+
+        .sidebar {
+            background: lightgreen;
+            grid-column: 1;
+            grid-row: 3 / span 1;
+            height: 100%;
+        }
+
+        h2 {
+            margin-top: 0;
+        }
+
+        div {
+            color: white;
+            padding: 10px;
+        }
+
+        p {
+            margin: 0 0 1em 0;
+        }
+
+    </style>
+
+</head>
+<body>
+
+<div class="sidebar"><h2>Sidebar</h2></div>
+
+    <div class="main">
+        <h2>Main</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+    </div>
+
+<div class="footer"><h2>Footer</h2></div>
+
+<div class="header"><h2>Header</h2></div>
+
+
+
+</body>
+</html>
